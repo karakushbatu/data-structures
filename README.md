@@ -10,7 +10,7 @@ This repository contains my implementations, projects, and experiments related t
 - **trees**: Binary trees and self-balancing BST implementation with traversal strategies.
 - **heaps**: Min-heap, heap sort, and a Python-based heap sort visualizer using ASCII art.
 - **graphs**: Graph traversal algorithms, including BFS, DFS, and Dijkstra's shortest path.
-- **practice-problems**: Algorithmic challenges implemented with different data structures.
+- **exercises**: Algorithmic challenges implemented with different data structures.
 - **projects**:
   - `cache-simulator`: A CPU-style LRU/FIFO cache simulator to understand memory access patterns.
   - `memory-pool-allocator`: A basic custom memory allocator using a free-list based on linked lists.
