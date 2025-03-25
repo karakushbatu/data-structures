@@ -21,7 +21,7 @@ This folder contains implementations and variations of linked lists in C++.
 
 ## Projects
 
-###Text Editor Buffer (Mini Project)
+### Text Editor Buffer (Mini Project)
 
 A simple line-based text editor simulation using a singly linked list.
 
