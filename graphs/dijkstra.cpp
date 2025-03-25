@@ -34,3 +34,11 @@ int main() {
     graph[3].push_back({4, 1});
 
     vector<int> dist(V, 1e9);
+    dijkstra(0, graph, dist);
+
+    cout << "Shortest distances from node 0:\n";
+    for (int i = 0; i < V; ++i)
+        cout << "Node " << i << ": " << dist[i] << endl;
+
+    return 0;
+}
