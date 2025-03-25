@@ -18,4 +18,23 @@ This folder contains implementations and variations of linked lists in C++.
 
 - Circular linked list
 - Linked list with tail pointer
-- Project: Text buffer using linked list (for a lightweight text editor)
+
+## Projects
+
+###Text Editor Buffer (Mini Project)
+
+A simple line-based text editor simulation using a singly linked list.
+
+Each line of text is stored as a node. You can add, insert, delete, and display lines in the buffer.
+
+### Features
+
+- Add line at end
+- Insert line at specific index
+- Delete line at index
+- Display full buffer
+
+### Why this matters
+
+This project simulates a basic version of how text editors might manage lines internally.  
+It demonstrates the use of linked lists in a practical, real-world-inspired scenario.
