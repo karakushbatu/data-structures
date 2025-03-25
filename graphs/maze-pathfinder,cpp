@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+struct Cell {
+    int x, y;
+};
+
+bool isValid(int x, int y, int rows, int cols, vector<vector<bool>>& visited, vector<vector<int>>& maze) {
+    return x >= 0 && x < rows && y >= 0 && y < cols && !visited[x][y] && maze[x][y] == 0;
+}
+
+bool bfs(vector<vector<int>>& maze, Cell start, Cell end) {
+    int rows = maze.size();
+    int cols = maze[0].size();
+    vector<vector<bool>> visited(rows, vector<bool>(cols, false));
+    queue<Cell> q;
+    vector<pair<int, int>> directions = {{-1,0},{1,0},{0,-1},{0,1}};
+
+    q.push(start);
+    visited[start.x][start.y] = true;
+
+    while (!q.empty()) {
+        Cell current = q.front(); q.pop();
+        if (current.x == end.x && current.y == end.y) return true;
+
+        for (auto [dx, dy] : directions) {
+            int newX = current.x + dx;
+            int newY = current.y + dy;
+            if (isValid(newX, newY, rows, cols, visited, maze)) {
+                visited[newX][newY] = true;
+                q.push({newX, newY});
+            }
+        }
+    }
+    return false;
+}
+
+int main() {
+    vector<vector<int>> maze = {
+        {0, 1, 0, 0, 0},
+        {0, 1, 0, 1, 0},
+        {0, 0, 0, 1, 0},
+        {1, 1, 0, 0, 0}
+    };
+
+    Cell start = {0, 0};
+    Cell end = {3, 4};
+
+    if (bfs(maze, start, end))
+        cout << "Path exists between start and end." << endl;
+    else
+        cout << "No path found." << endl;
+
+    return 0;
+}
